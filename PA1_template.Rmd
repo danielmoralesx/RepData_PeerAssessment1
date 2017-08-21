@@ -37,8 +37,9 @@ mean_nfilled <- mean(steps_day$total_steps)
 median_nfilled <- median(steps_day$total_steps)
 ```
 
-The mean of the total number of steps taken per day is `r mean_nfilled`and the 
-median is `r median_nfilled`.
+The mean of the total number of steps taken per day is 
+`r format(mean_nfilled, scientific = FALSE)` and the median is 
+`r median_nfilled`.
 
 ## What is the average daily activity pattern?
 
@@ -86,7 +87,8 @@ median_filled <- median(steps_day_filled$total_steps)
 ```
 
 The mean of the total number of steps taken per day in the filled dataset is 
-`r mean_filled` and the median is `r median_filled`. The method used for filling 
+`r format(mean_filled, scientific = FALSE)` and the median is 
+`r format(median_filled, scientific = FALSE)`. The method used for filling 
 does not affect the mean, but introduces some bias in the median.
 
 
