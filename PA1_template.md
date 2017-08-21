@@ -62,8 +62,7 @@ steps_day <- activity %>%
   na.omit() %>%
   group_by(date) %>% 
   summarise(total_steps = sum(steps))
-plot(steps_day$date, steps_day$total_steps, type = "h",
-     xlab = "Day", ylab = "Steps")
+hist(steps_day$total_steps, xlab = "Steps", main = "Total Steps Per Day")
 ```
 
 <img src="PA1_template_files/figure-html/unnamed-chunk-2-1.png" style="display: block; margin: auto;" />
@@ -121,11 +120,8 @@ activity_filled[is.na(activity_filled$steps), "steps"] <-
 steps_day_filled <- activity_filled %>%
   na.omit() %>%
   group_by(date) %>% 
-  summarise(total_steps = sum(steps), 
-            mean_steps = mean(steps), 
-            median_steps = median(steps))
-plot(steps_day_filled$date, steps_day_filled$total_steps, type = "h",
-     xlab = "Day", ylab = "Steps")
+  summarise(total_steps = sum(steps))
+hist(steps_day_filled$total_steps, xlab = "Steps", main = "Total Steps Per Day")
 ```
 
 <img src="PA1_template_files/figure-html/unnamed-chunk-5-1.png" style="display: block; margin: auto;" />
